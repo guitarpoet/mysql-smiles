@@ -10,9 +10,12 @@
 
 AC_PREREQ([2.69])
 AC_INIT(mysql-smiles, 1.0, http://github.com/guitarpoet/mysql-smiles)
-AM_INIT_AUTOMAKE(mysql-smiles, 1.0)
-AC_CONFIG_SRCDIR([src])
+AC_CONFIG_MACRO_DIRS([m4])
 AC_CONFIG_HEADERS([config.h])
+AC_CONFIG_SRCDIR([src/smiles.cc])
+AM_INIT_AUTOMAKE
+AC_ENABLE_SHARED
+LT_INIT
 
 # Checks for programs.
 AC_PROG_CXX

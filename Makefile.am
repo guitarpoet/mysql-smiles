@@ -1,1 +1,3 @@
-AM_INIT_AUTOMAKE(mysql-smiles, 1.0)
+AUTOMAKE_OPTIONS = foreign
+SUBDIRS = src
+ACLOCAL_AMFLAGS = -I m4

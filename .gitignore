@@ -12,3 +12,13 @@ aclocal.m4
 /compile
 /install-sh
 /missing
+*.swp
+*~
+/m4
+/src/.deps
+*.la
+/config.sub
+/config.guess
+/ltmain.sh
+/depcomp
+/libtool
