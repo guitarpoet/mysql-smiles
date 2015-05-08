@@ -10,6 +10,7 @@
 
 AC_PREREQ([2.69])
 AC_INIT(mysql-smiles, 1.0, http://github.com/guitarpoet/mysql-smiles)
+AM_INIT_AUTOMAKE(mysql-smiles, 1.0)
 AC_CONFIG_SRCDIR([src])
 AC_CONFIG_HEADERS([config.h])
 
@@ -64,5 +65,4 @@ CPPFLAGS="-I$OBABEL_INCDIR -g $CPPFLAGS"
 # Checks for typedefs, structures, and compiler characteristics.
 
 # Checks for library functions.
-
-AC_OUTPUT
+AC_OUTPUT(Makefile src/Makefile)
