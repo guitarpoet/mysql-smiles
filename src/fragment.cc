@@ -1,8 +1,23 @@
 #include "fragment.h"
 
-Fset* Fragmentor::fragment(OBMol* pm_mol) {
-	OBMol* pmol = pm_mol;
-	if(!pmol) return NULL;
+Fset* Fragmentor::fragment(const char* smiles) {
+	if(!smiles)
+		return NULL;
+
+	std::istringstream input(smiles);
+	std::ostringstream output;
+
+	OpenBabel::OBConversion conv(&input, &output);
+	conv.SetInFormat("smiles");
+
+	OpenBabel::OBMol mol;
+	OBMol* pmol = &mol;
+
+	if(!conv.Read(pmol)) {
+		// We failed to read the mol from the smiles
+		return NULL;
+	}
+
 	fragset.clear();//needed because now only one instance of fp class
 	ringset.clear();
  

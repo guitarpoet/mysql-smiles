@@ -22,3 +22,6 @@ aclocal.m4
 /ltmain.sh
 /depcomp
 /libtool
+*.lo
+.libs
+*.o

@@ -11,8 +11,6 @@
 #include <set>
 #include <vector>
                         
-#pragma GCC diagnostic ignored "-Wc++11-compat-deprecated-writable-strings"
-
 typedef std::set<std::vector<int> > Fset;
 typedef std::set<std::vector<int> >::iterator SetItr;
 
@@ -28,7 +26,7 @@ private:
 	unsigned int _flags;
 
 public:
-	Fset* fragment(OBMol* pm_mol);
+	Fset* fragment(const char* smiles);
 
 private:
     void getFragments(std::vector<int> levels, std::vector<int> curfrag,
