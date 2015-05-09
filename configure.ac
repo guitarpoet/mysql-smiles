@@ -22,7 +22,7 @@ AC_PROG_CXX
 AC_PROG_CC
 
 # Check for mysql plugin folders
-MYSQL_PLUGIN_FOLDERS="/usr/local/lib/mysql /usr/lib/mysql /usr/lib64/mysql/mysql /opt/local/lib/mysql /opt/local/lib/mysql55 /opt/local/lib/mysql56"
+MYSQL_PLUGIN_FOLDERS="/usr/local/lib/mysql /usr/lib/mysql /usr/lib64/mysql /opt/local/lib/mysql /opt/local/lib/mysql55 /opt/local/lib/mysql56"
 
 AC_MSG_CHECKING(mysql plugin folder)
 
