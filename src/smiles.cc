@@ -34,11 +34,12 @@ int mysql_smiles_fragmentor_parse(MYSQL_FTPARSER_PARAM *param) {
 					out << *i;
 				}
 				std::string s = out.str();
-				std::cerr << "Get token " << s << std::endl;
+//				std::cerr << "Get token " << s << std::endl;
+				int weight = s[0]? 1 : 0;
 				MYSQL_FTPARSER_BOOLEAN_INFO bool_info = {
 					FT_TOKEN_WORD, // Token type
 					0, // Yes No - Use no by default
-					0, // Weight Adjust - No adjust by default
+					weight, // Weight Adjust - No adjust by default
 					0, // Weight Adjust Sign - No sign
 					0, // Trunk
 		//          pos, // Position
