@@ -8,9 +8,9 @@
 #
 #===============================================================================
 
-AC_PREREQ([2.69])
+AC_PREREQ([2.63])
 AC_INIT(mysql-smiles, 1.0, http://github.com/guitarpoet/mysql-smiles)
-AC_CONFIG_MACRO_DIRS([m4])
+AC_CONFIG_MACRO_DIR([m4])
 AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_SRCDIR([src/smiles.cc])
 AM_INIT_AUTOMAKE
