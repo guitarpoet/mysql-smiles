@@ -27,13 +27,14 @@ int mysql_smiles_fragmentor_parse(MYSQL_FTPARSER_PARAM *param) {
 			SetItr itr;
 			for(itr=pf_set->begin(); itr!=pf_set->end();++itr) {
 				std::vector<int> v = (std::vector<int>) *itr;
-				ostrstream out;
+				ostringstream out;
 
 				std::vector<int>::iterator i;
 				for(i=v.begin(); i!=v.end(); ++i) {
 					out << *i;
 				}
-				std::string s = out.str();
+				out.flush();
+				const std::string& s = out.str();
 //				std::cerr << "Get token " << s << std::endl;
 				int weight = s[0]? 1 : 0;
 				MYSQL_FTPARSER_BOOLEAN_INFO bool_info = {
